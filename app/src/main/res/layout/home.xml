@@ -4,12 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    style="?android:attr/buttonBarStyle">
+
+    <TextView
+        android:id="@+id/albumsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/albums"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 
     <ListView
         android:id="@+id/albums_list"
         android:layout_width="match_parent"
-        android:layout_height="681dp" />
+        android:layout_height="638dp" >
+
+    </ListView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,14 +32,16 @@
             android:id="@+id/createNewAlbumButton"
             android:layout_width="201dp"
             android:layout_height="wrap_content"
-            android:text="Create New Album" />
+            android:text="@string/create_new_album"
+            style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
             android:id="@+id/searchForPhotosButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Search for Photos" />
+            android:text="@string/search_for_photos"
+            style="?android:attr/buttonBarButtonStyle"/>
 
     </LinearLayout>
 
