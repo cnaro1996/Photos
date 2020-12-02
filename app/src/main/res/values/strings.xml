@@ -8,4 +8,9 @@
     <string name="album_name">Album Name</string>
     <string name="example_album">example album</string>
     <string name="confirm_or_create">Confirm</string>
+    <string name="date_range">Date Range:</string>
+    <string name="tags">Tags:</string>
+    <string name="date_range_format_hint">MM/DD/YYYY - MM/DD/YYYY</string>
+    <string name="tags_hint">Ex. person=sesh</string>
+    <string name="search">Search</string>
 </resources>
