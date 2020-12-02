@@ -1,0 +1,4 @@
+com/example/androidphotos/MainActivity.java
+ com.example.androidphotos.MainActivity
+com/example/androidphotos/BuildConfig.java
+ com.example.androidphotos.BuildConfig
