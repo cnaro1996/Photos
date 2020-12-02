@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="63dp">
+
+        <TextView
+            android:id="@+id/albumLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/albumNameTextField"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="70sp"
+            android:text="@string/create_or_rename_album"
+            android:textColor="#000000"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:text="@string/back" />
+
+        <TextView
+            android:id="@+id/albumNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:text="@string/album_name"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/albumNameTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/albumNameLabel"
+            android:layout_toEndOf="@id/albumNameLabel"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/example_album"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/confirmOrCreateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/albumNameTextField"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50"
+            android:text="@string/confirm_or_create" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

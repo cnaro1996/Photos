@@ -3,4 +3,9 @@
     <string name="albums">Albums</string>
     <string name="create_new_album">Create New Album</string>
     <string name="search_for_photos">Search for Photos</string>
+    <string name="create_or_rename_album">Create Album</string>
+    <string name="back">Back</string>
+    <string name="album_name">Album Name</string>
+    <string name="example_album">example album</string>
+    <string name="confirm_or_create">Confirm</string>
 </resources>
