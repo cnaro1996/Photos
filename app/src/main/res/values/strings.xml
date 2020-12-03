@@ -13,4 +13,8 @@
     <string name="date_range_format_hint">MM/DD/YYYY - MM/DD/YYYY</string>
     <string name="tags_hint">Ex. person=sesh</string>
     <string name="search">Search</string>
+    <string name="rename">Rename</string>
+    <string name="view_slideshow">View Slideshow</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="delete_button">Delete button</string>
 </resources>
