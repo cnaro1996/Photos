@@ -69,7 +69,7 @@
         <ListView
             android:id="@+id/searchResultsList"
             android:layout_width="match_parent"
-            android:layout_height="449dp"
+            android:layout_height="400dp"
             android:layout_below="@id/editTextTextPersonName" />
 
         <Button

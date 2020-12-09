@@ -15,9 +15,7 @@
     <string name="search">Search</string>
     <string name="rename">Rename</string>
     <string name="view_slideshow">View Slideshow</string>
-    <string name="add_photo">Add Photo</string>
     <string name="delete_button">Delete button</string>
-    <string name="add_photo">Add Photo</string>
     <string name="button">Button</string>
     <string name="add_photo">Add Photo</string>
     <string name="select_from_phone">Select From Phone</string>
@@ -25,10 +23,6 @@
     <string name="photo_to_add">photo to add</string>
     <string name="prev">Prev</string>
     <string name="next">Next</string>
-    <string name="edit_tags">Edit Tags</string>
-    <string name="edit_tags">Edit Tags</string>
-    <string name="edit_tags">Edit Tags</string>
-    <string name="save">Save</string>
     <string name="edit_tags">Edit Tags</string>
     <string name="move_to_another_album">Move to Another Album</string>
     <string name="edit_photo">Edit Photo</string>
