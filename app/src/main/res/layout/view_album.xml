@@ -40,8 +40,8 @@
             android:layout_toStartOf="@id/deleteButton"
             android:text="@string/rename" />
 
-        <ListView
-            android:id="@+id/photosList"
+        <GridView
+            android:id="@+id/photosGrid"
             android:layout_width="match_parent"
             android:layout_height="264dp"
             android:layout_alignParentTop="true"
@@ -52,7 +52,7 @@
             android:id="@+id/addPhotoButton"
             android:layout_width="226dp"
             android:layout_height="55dp"
-            android:layout_below="@id/photosList"
+            android:layout_below="@id/photosGrid"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50sp"
             android:text="@string/add_photo" />

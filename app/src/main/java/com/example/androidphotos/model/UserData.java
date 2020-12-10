@@ -40,7 +40,6 @@ public class UserData implements Serializable {
 
         public Photo(String path) {
             this.path = path;
-            File pic = new File(path);
             this.tags = new ArrayList<Pair<String, String>>();
         }
 
@@ -301,6 +300,22 @@ public class UserData implements Serializable {
          */
         public List<Album> getAlbums() {
             return this.albums;
+        }
+
+        /**
+        * Fetches the album with @param name.
+        * @param name The name of the album to be fetched
+        * @return The album requested, or null if not found.
+        */
+        public Album getAlbum(String name) {
+            Album match = null;
+            for(Album album : albums) {
+                if(album.toString().equals(name)){
+                    match = album;
+                    break;
+                }
+            }
+            return match;
         }
     }
 
