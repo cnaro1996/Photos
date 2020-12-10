@@ -1512,8 +1512,6 @@ id displayPhotoImageView
 id dropdown_menu
 id editPhotoButton
 id editTagsButton
-id editTextTextPersonName
-id editTextTextPersonName2
 id edit_query
 id end
 id enterAlways
@@ -1637,8 +1635,9 @@ id scrollView
 id scrollable
 id searchBackButton
 id searchButton
+id searchForPhotos
 id searchForPhotosButton
-id searchResultsList
+id searchResultsGrid
 id search_badge
 id search_bar
 id search_button
@@ -1686,6 +1685,8 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id tags
+id tagsField
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id text
@@ -1694,9 +1695,6 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
-id textView2
-id textView3
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter

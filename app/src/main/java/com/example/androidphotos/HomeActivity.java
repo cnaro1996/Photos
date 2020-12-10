@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent myIntent = new Intent(HomeActivity.this, CreateRenameAlbumActivity.class);
+            myIntent.putExtra("TYPE", "Create");
             AndroidPhotos.setPrevState(HomeActivity.this);
             HomeActivity.this.startActivity(myIntent);
         }

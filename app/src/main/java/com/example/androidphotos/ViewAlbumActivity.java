@@ -50,6 +50,7 @@ public class ViewAlbumActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent myIntent = new Intent(ViewAlbumActivity.this, CreateRenameAlbumActivity.class);
             myIntent.putExtra("ALBUM_NAME", album.getName());
+            myIntent.putExtra("TYPE", "Rename");
             AndroidPhotos.setPrevState(ViewAlbumActivity.this);
             ViewAlbumActivity.this.startActivity(myIntent);
         }
