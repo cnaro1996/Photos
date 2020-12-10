@@ -916,6 +916,8 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color transparent
+color transparent_blue
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -1380,6 +1382,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selector
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1495,7 +1498,7 @@ id cut
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
-id deleteButton
+id deleteAlbumButton
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1616,7 +1619,7 @@ id progress_horizontal
 id prompt
 id radio
 id relativeLayout1
-id renameButton
+id renameAlbumButton
 id right
 id right_icon
 id right_side
@@ -1964,6 +1967,7 @@ string person
 string photo_to_add
 string prev
 string rename
+string rename_album
 string save
 string search
 string search_for_photos

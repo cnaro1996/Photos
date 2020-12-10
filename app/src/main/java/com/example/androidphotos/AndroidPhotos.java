@@ -8,10 +8,12 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.example.androidphotos.model.UserData;
 
+import java.io.File;
 import java.io.IOException;
 
 public class AndroidPhotos extends Application implements Application.ActivityLifecycleCallbacks {
@@ -130,4 +132,5 @@ public class AndroidPhotos extends Application implements Application.ActivityLi
     public void onActivityDestroyed(Activity activity) {
 
     }
+
 }

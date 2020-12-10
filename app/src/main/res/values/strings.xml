@@ -32,4 +32,5 @@
     <string name="check_to_add_tag_uncheck_to_delete">Check to add tag, Uncheck to delete</string>
     <string name="location">Location</string>
     <string name="person">Person</string>
+    <string name="rename_album">Rename Album</string>
 </resources>

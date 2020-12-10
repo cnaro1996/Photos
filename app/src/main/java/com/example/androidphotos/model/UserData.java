@@ -182,6 +182,10 @@ public class UserData implements Serializable {
             return album.name.equals(this.name);
         }
 
+        /**
+         *
+         * @return this album's name field.
+         */
         @Override
         public String toString() {
             return this.name;
@@ -319,6 +323,39 @@ public class UserData implements Serializable {
             }
             return match;
         }
+
+        /**
+        * Removes the specified album
+        * @param name the name of the specified album
+        * @return true if successfully removed, false otherwise.
+        */
+        public boolean removeAlbum(String name) {
+            boolean result = false;
+            for(Album album : albums) {
+                if(album.toString().equals(name)){
+                    albums.remove(album);
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        /**
+        * Compiles a list of URI's from the photos within the album.
+        * @param album
+        * @return
+        */
+        public static Uri[] getURIs(Album album) {
+            Uri[] URIs = new Uri[album.getPhotos().size()];
+            int i = 0;
+            for(Photo photo : album.getPhotos()) {
+                URIs[i] = photo.getImageData();
+                i++;
+            }
+            return URIs;
+        }
+
     }
 
 

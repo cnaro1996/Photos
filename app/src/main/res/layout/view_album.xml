@@ -21,7 +21,7 @@
             android:text="@string/back" />
 
         <ImageButton
-            android:id="@+id/deleteButton"
+            android:id="@+id/deleteAlbumButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -33,12 +33,12 @@
             app:srcCompat="@android:drawable/ic_menu_delete" />
 
         <Button
-            android:id="@+id/renameButton"
+            android:id="@+id/renameAlbumButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
-            android:layout_toStartOf="@id/deleteButton"
-            android:text="@string/rename" />
+            android:layout_toStartOf="@id/deleteAlbumButton"
+            android:text="@string/rename_album" />
 
         <GridView
             android:id="@+id/photosGrid"
@@ -47,7 +47,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_marginTop="75sp"
-            android:listSelector="@drawable/selector" />
+            android:listSelector="@android:drawable/list_selector_background" />
 
         <Button
             android:id="@+id/addPhotoButton"
