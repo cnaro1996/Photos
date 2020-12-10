@@ -1,20 +1,15 @@
 package com.example.androidphotos.model;
 
-import android.app.Activity;
 import android.content.Context;
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.net.Uri;
 
 import com.example.androidphotos.util.Pair;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,38 +22,37 @@ public class UserData implements Serializable {
          */
         private static final long serialVersionUID = 1L;
 
-        /**
-         * The file path to the image
-         */
-        private String path;
+        private String name;
 
+        private Uri imageData;
         /**
          * The list of key/value pairs (tags)
          * associated with the picture
          */
         private List<Pair<String, String>> tags;
 
-        public Photo(String path) {
-            this.path = path;
+        public Photo(Uri imageData) {
+            this.imageData = imageData;
             this.tags = new ArrayList<Pair<String, String>>();
+            this.name = "";
         }
 
         /**
-         * Get the file path of the image
+         * Get the uri of the image
          *
-         * @return the file path of the image
+         * @return the uri of the image
          */
-        public String getPath() {
-            return this.path;
+        public Uri getImageData() {
+            return this.imageData;
         }
 
         /**
-         * Set the file path of the image
+         * Set the uri of the image
          *
-         * @param path the file path to be set
+         * @param imageData the uri to be set
          */
-        public void setPath(String path) {
-            this.path = path;
+        public void setImageData(Uri imageData) {
+            this.imageData = imageData;
         }
 
         /**
@@ -79,6 +73,14 @@ public class UserData implements Serializable {
             this.tags.add(tag);
         }
 
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
         @Override
         public boolean equals(Object o) {
             if (o == this) {
@@ -89,7 +91,7 @@ public class UserData implements Serializable {
             }
 
             Photo photo = (Photo) o;
-            return photo.path.equals(this.path);
+            return photo.imageData.equals(this.imageData);
         }
     }
 
