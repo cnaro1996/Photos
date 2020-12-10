@@ -46,7 +46,8 @@
             android:layout_height="264dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
-            android:layout_marginTop="75sp" />
+            android:layout_marginTop="75sp"
+            android:listSelector="@drawable/selector" />
 
         <Button
             android:id="@+id/addPhotoButton"

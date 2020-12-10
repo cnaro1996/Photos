@@ -8,6 +8,8 @@
         android:minSdkVersion="29"
         android:targetSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name="com.example.androidphotos.AndroidPhotos"
         android:allowBackup="true"

@@ -4,6 +4,7 @@ import com.example.androidphotos.model.UserData.*;
 import com.example.androidphotos.util.ImageGridAdapter;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,19 +50,23 @@ public class ViewAlbumActivity extends AppCompatActivity {
         backButton = (Button) findViewById(R.id.albumBackButton);
         photosGrid = (GridView) findViewById(R.id.photosGrid);
 
-        photosGrid.setAdapter(new ImageGridAdapter(this, getPaths(album)));
+        photosGrid.setAdapter(new ImageGridAdapter(ViewAlbumActivity.this, getURIs(album)));
         addPhotoButton.setOnClickListener(addListener);
         backButton.setOnClickListener(backListener);
     }
 
-    //will be removed after merge.
-    private String[] getPaths(Album album) {
-        String[] paths = new String[album.getPhotos().size()];
+    /**
+     * Compiles a list of URI's from the photos within the album.
+     * @param album
+     * @return
+     */
+    private Uri[] getURIs(Album album) {
+        Uri[] URIs = new Uri[album.getPhotos().size()];
         int i = 0;
         for(Photo photo : album.getPhotos()) {
-            paths[i] = photo.getPath();
+            URIs[i] = photo.getImageData();
             i++;
         }
-        return paths;
+        return URIs;
     }
 }

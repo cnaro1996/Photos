@@ -1607,7 +1607,7 @@ int id percent 0x7f0800dd
 int id peronInput 0x7f0800de
 int id personCB 0x7f0800df
 int id photoTagList 0x7f0800e0
-int id photosList 0x7f0800e1
+int id photosGrid 0x7f0800e1
 int id pin 0x7f0800e2
 int id prevButton 0x7f0800e3
 int id progress_circular 0x7f0800e4

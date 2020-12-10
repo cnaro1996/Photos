@@ -1,34 +1,33 @@
 package com.example.androidphotos.util;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import java.io.File;
 
-//TODO: Need to convert from using image paths to image URI's.
 public class ImageGridAdapter extends BaseAdapter {
     private Context context;
 
-    public String[] thumbPaths;
+    public Uri[] thumbURIs;
 
-    public ImageGridAdapter(Context context, String[] paths) {
+    public ImageGridAdapter(Context context, Uri[] URIs) {
         this.context = context;
-        thumbPaths = paths;
+        thumbURIs = URIs;
     }
 
     @Override
     public int getCount() {
-        return thumbPaths.length;
+        return thumbURIs.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return thumbPaths[position];
+        return thumbURIs[position];
     }
 
     @Override
@@ -41,13 +40,14 @@ public class ImageGridAdapter extends BaseAdapter {
         ImageView imageView;
         if(convertView == null) {
             imageView = new ImageView(context);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(192,192));
+            imageView.setLayoutParams(new GridView.LayoutParams(192,192));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         } else {
             imageView = (ImageView) convertView;
         }
-        imageView.setImageBitmap(BitmapFactory
-                .decodeFile(new File(thumbPaths[position]).getAbsolutePath()));
+        imageView.setImageURI(thumbURIs[position]);
+
+        Log.v("ImageGridAdapter", "Calling convertView " + convertView);
 
         return imageView;
     }

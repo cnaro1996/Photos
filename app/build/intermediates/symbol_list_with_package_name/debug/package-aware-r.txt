@@ -1608,7 +1608,7 @@ id percent
 id peronInput
 id personCB
 id photoTagList
-id photosList
+id photosGrid
 id pin
 id prevButton
 id progress_circular
