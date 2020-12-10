@@ -23,8 +23,8 @@ public class UserData implements Serializable {
         private static final long serialVersionUID = 1L;
 
         private String name;
-
         private Uri imageData;
+
         /**
          * The list of key/value pairs (tags)
          * associated with the picture
@@ -80,7 +80,7 @@ public class UserData implements Serializable {
         public void setName(String name) {
             this.name = name;
         }
-
+        
         @Override
         public boolean equals(Object o) {
             if (o == this) {

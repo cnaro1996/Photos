@@ -14,12 +14,12 @@
 
         <TextView
             android:id="@+id/caption"
-            android:layout_width="313dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="382dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="324dp"
             android:gravity="center"
             android:text=""
             android:textSize="36sp" />
@@ -34,8 +34,8 @@
 
         <ImageView
             android:id="@+id/displayPhotoImageView"
-            android:layout_width="400dp"
-            android:layout_height="300dp"
+            android:layout_width="332dp"
+            android:layout_height="250dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_centerInParent="true"
@@ -50,7 +50,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_centerVertical="true"
-            android:layout_marginTop="577dp"
+            android:layout_marginTop="475dp"
             android:text="@string/edit_photo" />
 
         <Button
@@ -61,19 +61,18 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
             android:layout_centerVertical="true"
-            android:layout_marginTop="576dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="475dp"
+            android:layout_marginEnd="-7dp"
             android:text="@string/move_to_another_album" />
 
         <ListView
             android:id="@+id/photoTagList"
-            android:layout_width="193dp"
-            android:layout_height="122dp"
+            android:layout_width="191dp"
+            android:layout_height="84dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="443dp" />
+            android:layout_marginTop="372dp" />
 
 
     </RelativeLayout>

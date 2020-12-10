@@ -38,11 +38,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="122dp"
-            android:text="@string/select_from_phone" />
+            android:layout_marginTop="179dp"
+            android:layout_marginEnd="-1dp"
+            android:text="@string/open_photos" />
 
         <ImageView
             android:id="@+id/addPhotoImageView"
@@ -50,39 +51,64 @@
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="185dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="124dp"
             android:contentDescription="@string/photo_to_add"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <ListView
-            android:id="@+id/photoTagList"
-            android:layout_width="190dp"
-            android:layout_height="138dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="false"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="358dp" />
-
         <RelativeLayout
-            android:layout_width="182dp"
-            android:layout_height="139dp"
+            android:layout_width="290dp"
+            android:layout_height="162dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
-            android:layout_marginTop="359dp"
-            android:layout_marginEnd="0dp">
+            android:layout_marginTop="283dp"
+            android:layout_marginEnd="55dp">
 
-            <Button
-                android:id="@+id/editTagsButton"
-                android:layout_width="wrap_content"
+            <CheckBox
+                android:id="@+id/locationCB"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="false"
-                android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:layout_marginTop="43dp"
-                android:text="@string/edit_tags" />
+                android:layout_marginTop="33dp"
+                android:text="@string/location" />
+
+            <EditText
+                android:id="@+id/locationInput"
+                android:layout_width="187dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="33dp"
+                android:layout_marginEnd="1dp"
+                android:hint="@string/location" />
+
+            <CheckBox
+                android:id="@+id/personCB"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="97dp"
+                android:text="@string/person" />
+
+            <EditText
+                android:id="@+id/personInput"
+                android:layout_width="187dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="97dp"
+                android:layout_marginEnd="0dp"
+                android:hint="@string/person" />
+
         </RelativeLayout>
 
         <Button
@@ -91,9 +117,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
-            android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="538dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="455dp"
             android:text="@string/save" />
 
 

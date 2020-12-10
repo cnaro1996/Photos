@@ -14,16 +14,22 @@
         android:theme="@style/Theme.Androidphotos">
 
         <activity android:name=".HomeActivity">
+
+        </activity>
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".CreateRenameAlbumActivity"></activity>
+        <activity android:name=".EditTagsActivity"></activity>
+        <activity android:name=".AddPhotoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".CreateRenameAlbumActivity"></activity>
-        <activity android:name=".EditTagsActivity"></activity>
-        <activity android:name=".AddPhotoActivity"></activity>
         <activity android:name=".ViewAlbumActivity"></activity>
+        <activity android:name=".DisplayPhotoActivity">
+
+        </activity>
+        <activity android:name=".SlideshowActivity"></activity>
     </application>
 
 </manifest>
