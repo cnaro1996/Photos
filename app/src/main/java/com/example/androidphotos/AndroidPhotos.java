@@ -1,7 +1,12 @@
 package com.example.androidphotos;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,7 +14,7 @@ import com.example.androidphotos.model.UserData;
 
 import java.io.IOException;
 
-public class AndroidPhotos extends AppCompatActivity {
+public class AndroidPhotos extends Application implements Application.ActivityLifecycleCallbacks {
 
     /**
      * The user data object
@@ -26,24 +31,27 @@ public class AndroidPhotos extends AppCompatActivity {
      */
     private static AppCompatActivity prevState;
 
+    private static Context context;
+
+    private int activityRefs = 0;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        try {
-            userData = UserData.readData();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-        Intent myIntent = new Intent(AndroidPhotos.this, HomeActivity.class);
-        AndroidPhotos.setPrevState(this);
-        AndroidPhotos.this.startActivity(myIntent);
+    public void onCreate() {
+        super.onCreate();
+        registerActivityLifecycleCallbacks(this);
+        context = this.getApplicationContext();
+        UserData.setContext(context);
+        userData = UserData.readData();
     }
 
     public static UserData getUserData() {
         return userData;
+    }
+
+    public static void setUserData(UserData usr) {
+        UserData.setContext(context);
+        userData = usr;
     }
 
     /**
@@ -80,5 +88,46 @@ public class AndroidPhotos extends AppCompatActivity {
      */
     public static void setPrevState(AppCompatActivity activity) {
         prevState = activity;
+    }
+
+    @Override
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void onActivityStarted(Activity activity) {
+        if(++activityRefs == 1 && !activity.isChangingConfigurations()) {
+            //app is coming to the foreground
+            userData = UserData.readData();
+        }
+    }
+
+    @Override
+    public void onActivityResumed(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityPaused(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityStopped(Activity activity) {
+        if(--activityRefs == 0 && !activity.isChangingConfigurations()) {
+            //app is entering background
+            UserData.writeData(userData);
+        }
+    }
+
+    @Override
+    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+    }
+
+    @Override
+    public void onActivityDestroyed(Activity activity) {
+
     }
 }

@@ -1,20 +1,22 @@
 package com.example.androidphotos;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.androidphotos.model.UserData.*;
+import com.example.androidphotos.util.Pair;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddPhotoActivity extends AppCompatActivity {
 
@@ -25,11 +27,12 @@ public class AddPhotoActivity extends AppCompatActivity {
     private Button saveButton;
     private ImageView imgView;
     private ListView tagList;
+    private Album currentAlbum;
 
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent myIntent = new Intent(AddPhotoActivity.this, HomeActivity.class);
+            Intent myIntent = new Intent(AddPhotoActivity.this, ViewAlbumActivity.class);
             AddPhotoActivity.this.startActivity(myIntent);
         }
     };
@@ -64,6 +67,8 @@ public class AddPhotoActivity extends AppCompatActivity {
         imgView = (ImageView) findViewById(R.id.addPhotoImageView);
         tagList = (ListView) findViewById(R.id.photoTagList);
 
+        initList();
+
         backButton.setOnClickListener(backListener);
         selectButton.setOnClickListener(selectListener);
         editTagsButton.setOnClickListener(editTagsListener);
@@ -77,4 +82,13 @@ public class AddPhotoActivity extends AppCompatActivity {
            imgView.setImageURI(imageData);
         }
     }
+
+    private void initList(){
+        List<Pair> tags = new ArrayList<>();
+        tags.add(new Pair("Key", "Value"));
+        ArrayAdapter<Pair> arrayAdapter = new ArrayAdapter<Pair>(
+                this, android.R.layout.simple_list_item_1, tags);
+        tagList.setAdapter(arrayAdapter);
+    }
+
 }

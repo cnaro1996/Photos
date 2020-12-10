@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.androidphotos.model.UserData;
 import com.example.androidphotos.model.UserData.*;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {

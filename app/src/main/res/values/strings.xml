@@ -29,4 +29,7 @@
     <string name="move_photo">Move Photo</string>
     <string name="select_album_to_move_to">Select Album to Move to:</string>
     <string name="move">Move</string>
+    <string name="check_to_add_tag_uncheck_to_delete">Check to add tag, Uncheck to delete</string>
+    <string name="location">Location</string>
+    <string name="person">Person</string>
 </resources>

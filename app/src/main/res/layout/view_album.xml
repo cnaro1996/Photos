@@ -43,7 +43,7 @@
         <ListView
             android:id="@+id/photosList"
             android:layout_width="match_parent"
-            android:layout_height="400sp"
+            android:layout_height="264dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_marginTop="75sp" />

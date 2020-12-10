@@ -1,6 +1,9 @@
 package com.example.androidphotos.model;
 
-import android.os.Environment;
+import android.app.Activity;
+import android.content.Context;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidphotos.util.Pair;
 
@@ -190,11 +193,13 @@ public class UserData implements Serializable {
          */
         private static final long serialVersionUID = 1L;
 
+        private static Context context;
+
         /**
          * The path to the user's saved, serialized
          * data file
          */
-        private String pathToSerializedData;
+        private static String serializedDataFile = "user.dat";
 
         /**
          * The albums this user has
@@ -207,9 +212,7 @@ public class UserData implements Serializable {
         private List<String> userTags;
 
         public UserData() {
-            this.pathToSerializedData = "data" + File.separator + "user.dat";
             this.albums = new ArrayList<Album>();
-            albums.add(new Album("test"));
             this.userTags = new ArrayList<String>();
             this.userTags.add("Location");
             this.userTags.add("Person");
@@ -220,22 +223,19 @@ public class UserData implements Serializable {
          * saved user data
          *
          */
-        public static UserData readData() throws IOException, ClassNotFoundException {
+        public static UserData readData() {
             UserData data = null;
-//            File dataDir = new File(getExternalFilesDir() + File.separator + "data" + File.separator);
-//            if(!dataDir.exists()) {
-//                Files.createDirectory(dataDir.toPath());
-//            }
-//
-//            String pathToData = dataDir + File.separator + "user.dat";
-//            File dataFile = new File(pathToData);
-//            if(dataFile.exists()) {
-//                ObjectInputStream ois = new ObjectInputStream(new FileInputStream(dataFile));
-//                data = (UserData)ois.readObject();
-//            }
-
-            if(null == data) {
-                data = new UserData();
+            if(null != context) {
+                try{
+                    FileInputStream fis = context.openFileInput(serializedDataFile);
+                    ObjectInputStream ois = new ObjectInputStream(fis);
+                    data = (UserData) ois.readObject();
+                    ois.close();
+                    fis.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    data = new UserData();
+                }
             }
 
             return data;
@@ -246,20 +246,18 @@ public class UserData implements Serializable {
          * the next time the program is run
          *
          */
-        public static void writeData(UserData usr) throws IOException {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(usr.getPathToSerializedData()));
-            oos.writeObject(usr);
-        }
+        public static void writeData(UserData usr){
+            if(null != context) {
+                try {
+                    FileOutputStream fos = context.openFileOutput(serializedDataFile, Context.MODE_PRIVATE);
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(usr);
+                    oos.close();
+                    fos.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-        /**
-         * Create the directories for the user and it's data
-         * to be saved
-         *
-         */
-        public void createDirs() throws IOException {
-            File dataDir = new File("data" + File.separator);
-            if(!dataDir.exists()) {
-                Files.createDirectory(dataDir.toPath());
             }
         }
 
@@ -284,8 +282,16 @@ public class UserData implements Serializable {
          * @return the file path to the user's serialized
          * data file
          */
-        public String getPathToSerializedData() {
-            return this.pathToSerializedData;
+        public static String getSerializedDataFile() {
+            return serializedDataFile;
+        }
+
+        public static Context getContext() {
+            return context;
+        }
+
+        public static void setContext(Context context) {
+            UserData.context = context;
         }
 
         /**

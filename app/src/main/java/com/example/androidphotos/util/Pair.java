@@ -29,4 +29,9 @@ public class Pair <K, V> {
     public void setKey(K key) {
         this.key = key;
     }
+
+    @Override
+    public java.lang.String toString() {
+        return "[" + key + " , " + value + "]";
+    }
 }
