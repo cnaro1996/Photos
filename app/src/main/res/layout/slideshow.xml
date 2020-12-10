@@ -19,7 +19,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="false"
         android:layout_centerInParent="true"
-        android:layout_marginTop="142dp"
+        android:layout_marginTop="74dp"
         android:contentDescription="@string/photo_to_add"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
@@ -29,9 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="false"
-        android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="489dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="384dp"
         android:text="@string/prev" />
 
     <Button
@@ -40,8 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="false"
-        android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="551dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="433dp"
         android:text="@string/next" />
 </RelativeLayout>

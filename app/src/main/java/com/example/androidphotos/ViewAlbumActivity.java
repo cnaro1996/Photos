@@ -23,6 +23,7 @@ public class ViewAlbumActivity extends AppCompatActivity {
     private Button viewSlideShowButton;
     private GridView photosGrid;
 
+    private UserData user;
     private Album album;
 
     private AdapterView.OnItemClickListener photosGridListener = new AdapterView.OnItemClickListener() {
@@ -59,7 +60,8 @@ public class ViewAlbumActivity extends AppCompatActivity {
     private View.OnClickListener deleteListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            AndroidPhotos.getUserData().removeAlbum(album.getName());
+            user.removeAlbum(album.getName());
+            AndroidPhotos.setUserData(user);
             Intent myIntent = new Intent(ViewAlbumActivity.this, HomeActivity.class);
             AndroidPhotos.setPrevState(ViewAlbumActivity.this);
             ViewAlbumActivity.this.startActivity(myIntent);
@@ -91,7 +93,8 @@ public class ViewAlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AndroidPhotos.setCurrentState(ViewAlbumActivity.this);
         setContentView(R.layout.view_album);
-        album = AndroidPhotos.getUserData().getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
+        user = AndroidPhotos.getUserData();
+        album = user.getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
 
         renameAlbumButton = (Button) findViewById(R.id.renameAlbumButton);
         deleteAlbumButton = (ImageButton) findViewById(R.id.deleteAlbumButton);

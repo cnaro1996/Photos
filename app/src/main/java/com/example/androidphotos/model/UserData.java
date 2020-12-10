@@ -23,7 +23,7 @@ public class UserData implements Serializable {
         private static final long serialVersionUID = 1L;
 
         private String name;
-        private Uri imageData;
+        private String uriString;
 
         /**
          * The list of key/value pairs (tags)
@@ -31,8 +31,8 @@ public class UserData implements Serializable {
          */
         private List<Pair<String, String>> tags;
 
-        public Photo(Uri imageData) {
-            this.imageData = imageData;
+        public Photo(Uri uri) {
+            this.uriString = uri.toString();
             this.tags = new ArrayList<Pair<String, String>>();
             this.name = "";
         }
@@ -42,17 +42,17 @@ public class UserData implements Serializable {
          *
          * @return the uri of the image
          */
-        public Uri getImageData() {
-            return this.imageData;
+        public String getUriString() {
+            return this.uriString;
         }
 
         /**
          * Set the uri of the image
          *
-         * @param imageData the uri to be set
+         * @param uri the uri to be set
          */
-        public void setImageData(Uri imageData) {
-            this.imageData = imageData;
+        public void setUriString(Uri uri) {
+            this.uriString = uri.toString();
         }
 
         /**
@@ -80,7 +80,7 @@ public class UserData implements Serializable {
         public void setName(String name) {
             this.name = name;
         }
-        
+
         @Override
         public boolean equals(Object o) {
             if (o == this) {
@@ -91,7 +91,7 @@ public class UserData implements Serializable {
             }
 
             Photo photo = (Photo) o;
-            return photo.imageData.equals(this.imageData);
+            return photo.uriString.equals(this.uriString);
         }
     }
 
@@ -350,7 +350,7 @@ public class UserData implements Serializable {
             Uri[] URIs = new Uri[album.getPhotos().size()];
             int i = 0;
             for(Photo photo : album.getPhotos()) {
-                URIs[i] = photo.getImageData();
+                URIs[i] = Uri.parse(photo.getUriString());
                 i++;
             }
             return URIs;

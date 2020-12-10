@@ -52,8 +52,8 @@ public class AndroidPhotos extends Application implements Application.ActivityLi
     }
 
     public static void setUserData(UserData usr) {
-        UserData.setContext(context);
         userData = usr;
+        UserData.writeData(usr);
     }
 
     /**

@@ -9,11 +9,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.androidphotos.model.UserData;
+
 public class CreateRenameAlbumActivity extends AppCompatActivity {
     private Button confirmOrCreateButton;
     private Button backButton;
     private EditText nameInput;
     private TextView albumLabel;
+
+    private UserData user;
 
     private Intent intent;
 
@@ -22,9 +26,11 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
         public void onClick(View v) {
             if(null != nameInput && !nameInput.getText().toString().trim().isEmpty()){
                 if(intent.getStringExtra("TYPE").equals("Rename")){
-                    AndroidPhotos.getUserData().getAlbum(intent.getStringExtra("ALBUM_NAME")).
+                    user.getAlbum(intent.getStringExtra("ALBUM_NAME")).
                             setName(nameInput.getText().toString());
+                    AndroidPhotos.setUserData(user);
                     Intent myIntent = new Intent(CreateRenameAlbumActivity.this, ViewAlbumActivity.class);
+                    myIntent.putExtra("ALBUM_NAME", nameInput.getText().toString());
                     CreateRenameAlbumActivity.this.startActivity(myIntent);
                 } else {
                     AndroidPhotos.getUserData().createAlbum(nameInput.getText().toString().trim());
@@ -52,6 +58,7 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_or_rename_album);
+        user = AndroidPhotos.getUserData();
 
         intent = this.getIntent();
 

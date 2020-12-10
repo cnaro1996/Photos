@@ -15,8 +15,6 @@ import com.example.androidphotos.model.UserData.*;
 import com.example.androidphotos.util.ImageGridAdapter;
 import com.example.androidphotos.util.Pair;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,7 +70,7 @@ public class SearchActivity extends AppCompatActivity {
         Uri[] URIs = new Uri[results.size()];
         int i = 0;
         for(Photo photo: results) {
-            URIs[i] = photo.getImageData();
+            URIs[i] = Uri.parse(photo.getUriString());
         }
         return URIs;
     }

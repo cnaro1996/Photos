@@ -15,6 +15,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.androidphotos.model.UserData;
 import com.example.androidphotos.model.UserData.*;
 import com.example.androidphotos.util.Pair;
 
@@ -25,6 +26,8 @@ import java.util.List;
 public class AddPhotoActivity extends AppCompatActivity {
 
     private static final int GALLERY_REQUEST_CODE = 123;
+    private UserData user;
+
     private Button backButton;
     private Button selectButton;
     private Button saveButton;
@@ -51,7 +54,7 @@ public class AddPhotoActivity extends AppCompatActivity {
         public void onClick(View v) {
             Intent intent = new Intent();
             intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
+            intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
             startActivityForResult(Intent.createChooser(intent, "Select Picture"), GALLERY_REQUEST_CODE);
         }
     };
@@ -69,9 +72,11 @@ public class AddPhotoActivity extends AppCompatActivity {
                 }
                 add.setName(name);
                 currentAlbum.addPhoto(add);
+                AndroidPhotos.setUserData(user);
             }
 
             Intent myIntent = new Intent(AddPhotoActivity.this, ViewAlbumActivity.class);
+            myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
             AddPhotoActivity.this.startActivity(myIntent);
         }
     };
@@ -80,6 +85,8 @@ public class AddPhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_photo);
+        currentAlbum = AndroidPhotos.getUserData().getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
+        user = AndroidPhotos.getUserData();
 
         backButton = (Button) findViewById(R.id.backButton);
         selectButton = (Button) findViewById(R.id.selectButton);
@@ -93,6 +100,7 @@ public class AddPhotoActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(backListener);
         selectButton.setOnClickListener(selectListener);
+        saveButton.setOnClickListener(saveListener);
     }
 
     @Override
@@ -103,7 +111,11 @@ public class AddPhotoActivity extends AppCompatActivity {
            Cursor returnCursor =
                    getContentResolver().query(imageData, null, null, null, null);
            int nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
-           name = returnCursor.getString(nameIndex);
+//           if(nameIndex > 0){
+//               name = returnCursor.getString(nameIndex);
+//           } else {
+               name = "";
+//           }
            uri = imageData;
            imgView.setImageURI(imageData);
 
