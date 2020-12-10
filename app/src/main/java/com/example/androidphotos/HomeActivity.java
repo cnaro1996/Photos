@@ -3,6 +3,7 @@ package com.example.androidphotos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -19,6 +20,17 @@ public class HomeActivity extends AppCompatActivity {
     private Button createAlbumButton;
     private Button searchButton;
     private ListView albumList;
+
+    private AdapterView.OnItemClickListener listViewListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Intent intent = new Intent(HomeActivity.this, ViewAlbumActivity.class);
+            String name = parent.getAdapter().getItem(position).toString();
+            intent.putExtra("ALBUM_NAME", name);
+            AndroidPhotos.setPrevState(HomeActivity.this);
+            HomeActivity.this.startActivity(intent);
+        }
+    };
 
     private View.OnClickListener createButtonListener = new View.OnClickListener() {
         @Override
@@ -50,6 +62,7 @@ public class HomeActivity extends AppCompatActivity {
 
         initList();
 
+        albumList.setOnItemClickListener(listViewListener);
         createAlbumButton.setOnClickListener(createButtonListener);
         searchButton.setOnClickListener(searchButtonListener);
     }

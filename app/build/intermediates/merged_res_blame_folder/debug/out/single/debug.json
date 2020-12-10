@@ -1,19 +1,35 @@
 [
     {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_move_photo.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\move_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_album.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\view_album.xml"
+    },
+    {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_create_or_rename_album.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\create_or_rename_album.xml"
     },
     {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_add_photo.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\add_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_home.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_display_photo.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\display_photo.xml"
     },
     {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -24,20 +40,8 @@
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -48,15 +52,47 @@
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_search_photos.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\search_photos.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_edit_tags.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\edit_tags.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_slideshow.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_view_artifact.xml.flat",
+        "source": "C:\\Users\\cnaro\\Desktop\\Fall 2020\\Software Methodology\\finalproject\\Androidphotos\\app\\src\\main\\res\\layout\\row_view_artifact.xml"
     }
 ]

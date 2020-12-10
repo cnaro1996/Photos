@@ -1,4 +1,34 @@
-com/example/androidphotos/MainActivity.java
- com.example.androidphotos.MainActivity
+com/example/androidphotos/HomeActivity.java
+ com.example.androidphotos.HomeActivity
+ com.example.androidphotos.HomeActivity$1
+ com.example.androidphotos.HomeActivity$2
+ com.example.androidphotos.HomeActivity$3
+com/example/androidphotos/util/Pair.java
+ com.example.androidphotos.util.Pair
+com/example/androidphotos/SearchActivity.java
+ com.example.androidphotos.SearchActivity
+ com.example.androidphotos.SearchActivity$1
+com/example/androidphotos/ViewAlbumActivity.java
+ com.example.androidphotos.ViewAlbumActivity
+ com.example.androidphotos.ViewAlbumActivity$1
+ com.example.androidphotos.ViewAlbumActivity$2
+com/example/androidphotos/AndroidPhotos.java
+ com.example.androidphotos.AndroidPhotos
+com/example/androidphotos/AddPhotoActivity.java
+ com.example.androidphotos.AddPhotoActivity
+ com.example.androidphotos.AddPhotoActivity$1
+ com.example.androidphotos.AddPhotoActivity$2
+ com.example.androidphotos.AddPhotoActivity$3
+com/example/androidphotos/CreateRenameAlbumActivity.java
+ com.example.androidphotos.CreateRenameAlbumActivity
+ com.example.androidphotos.CreateRenameAlbumActivity$1
+ com.example.androidphotos.CreateRenameAlbumActivity$2
 com/example/androidphotos/BuildConfig.java
  com.example.androidphotos.BuildConfig
+com/example/androidphotos/model/UserData.java
+ com.example.androidphotos.model.UserData
+ com.example.androidphotos.model.UserData$Album
+ com.example.androidphotos.model.UserData$Photo
+com/example/androidphotos/EditTagsActivity.java
+ com.example.androidphotos.EditTagsActivity
+ com.example.androidphotos.EditTagsActivity$1
