@@ -61,6 +61,7 @@ public class SlideshowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slideshow);
+        setTitle("Slideshow");
         currentAlbum = AndroidPhotos.getUserData().getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
 
         imageView = (ImageView) findViewById(R.id.slideshowImageView);

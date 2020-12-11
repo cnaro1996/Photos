@@ -18,6 +18,7 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
     private TextView albumLabel;
 
     private UserData user;
+    private UserData.Album currentAlbum;
 
     private Intent intent;
 
@@ -26,8 +27,7 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
         public void onClick(View v) {
             if(null != nameInput && !nameInput.getText().toString().trim().isEmpty()){
                 if(intent.getStringExtra("TYPE").equals("Rename")){
-                    user.getAlbum(intent.getStringExtra("ALBUM_NAME")).
-                            setName(nameInput.getText().toString());
+                    currentAlbum.setName(nameInput.getText().toString());
                     AndroidPhotos.setUserData(user);
                     Intent myIntent = new Intent(CreateRenameAlbumActivity.this, ViewAlbumActivity.class);
                     myIntent.putExtra("ALBUM_NAME", nameInput.getText().toString());
@@ -46,6 +46,7 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
         public void onClick(View v) {
             if(intent.getStringExtra("TYPE").equals("Rename")){
                 Intent myIntent = new Intent(CreateRenameAlbumActivity.this, ViewAlbumActivity.class);
+                myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
                 CreateRenameAlbumActivity.this.startActivity(myIntent);
             } else {
                 Intent myIntent = new Intent(CreateRenameAlbumActivity.this, HomeActivity.class);
@@ -58,6 +59,7 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_or_rename_album);
+        setTitle("");
         user = AndroidPhotos.getUserData();
 
         intent = this.getIntent();
@@ -68,8 +70,11 @@ public class CreateRenameAlbumActivity extends AppCompatActivity {
         nameInput = (EditText) findViewById((R.id.albumNameTextField));
 
         if(intent.getStringExtra("TYPE").equals("Rename")){
+            setTitle("Rename Album");
+            currentAlbum = user.getAlbum(intent.getStringExtra("ALBUM_NAME"));
             albumLabel.setText("Rename Album");
         } else {
+            setTitle("Create Album");
             albumLabel.setText("Create Album");
         }
 

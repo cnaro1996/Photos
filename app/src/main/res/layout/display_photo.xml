@@ -22,6 +22,9 @@
             android:layout_marginTop="324dp"
             android:gravity="center"
             android:text=""
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textSize="18sp" />
 
         <Button
@@ -43,27 +46,51 @@
             android:contentDescription="@string/photo_to_add"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 
-        <Button
-            android:id="@+id/editPhotoButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="false"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="475dp"
-            android:text="@string/edit_photo" />
-
-        <Button
-            android:id="@+id/movePhotoButton"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="475dp"
-            android:layout_marginEnd="-7dp"
-            android:text="@string/move_to_another_album" />
+
+            android:layout_marginTop="471dp"
+            android:layout_marginEnd="0dp">
+
+            <Button
+                android:id="@+id/editPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/edit" />
+
+            <Button
+                android:id="@+id/movePhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/move" />
+
+            <Button
+                android:id="@+id/removePhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/remove" />
+
+        </RelativeLayout>
 
         <ListView
             android:id="@+id/photoTagList"

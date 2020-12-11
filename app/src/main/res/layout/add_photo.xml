@@ -12,19 +12,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="215dp"
-            android:layout_height="51dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="false"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="false"
-            android:layout_marginTop="61dp"
-            android:gravity="center"
-            android:text="@string/add_photo"
-            android:textSize="36sp" />
-
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
@@ -41,18 +28,18 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="false"
             android:layout_centerInParent="true"
-            android:layout_marginTop="179dp"
+            android:layout_marginTop="151dp"
             android:layout_marginEnd="-1dp"
             android:text="@string/open_photos" />
 
         <ImageView
             android:id="@+id/addPhotoImageView"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
+            android:layout_width="244dp"
+            android:layout_height="187dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
             android:layout_centerVertical="true"
-            android:layout_marginTop="124dp"
+            android:layout_marginTop="81dp"
             android:contentDescription="@string/photo_to_add"
             app:srcCompat="@drawable/ic_launcher_foreground" />
 

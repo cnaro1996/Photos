@@ -96,6 +96,7 @@ public class ViewAlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AndroidPhotos.setCurrentState(ViewAlbumActivity.this);
         setContentView(R.layout.view_album);
+        setTitle("");
         user = AndroidPhotos.getUserData();
         album = user.getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
 
@@ -114,6 +115,7 @@ public class ViewAlbumActivity extends AppCompatActivity {
         if(null != album) {
             photosGrid.setAdapter(new ImageGridAdapter(ViewAlbumActivity.this, UserData.getURIs(album)));
             photosGrid.setOnItemClickListener(photosGridListener);
+            setTitle(album.getName());
         }
     }
 }

@@ -56,6 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         AndroidPhotos.setCurrentState(this);
         setContentView(R.layout.home);
+        setTitle("Welcome to AndroidPhotos!");
 
         createAlbumButton = (Button) findViewById(R.id.createNewAlbumButton);
         searchButton = (Button) findViewById(R.id.searchForPhotosButton);

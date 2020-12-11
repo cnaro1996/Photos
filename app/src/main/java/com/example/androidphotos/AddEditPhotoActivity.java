@@ -41,7 +41,15 @@ public class AddEditPhotoActivity extends AppCompatActivity {
     private View.OnClickListener backListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent myIntent = new Intent(AddEditPhotoActivity.this, ViewAlbumActivity.class);
+            Intent myIntent;
+            if(type == 1 && null != currentPhoto) {
+                myIntent = new Intent(AddEditPhotoActivity.this, DisplayPhotoActivity.class);
+                myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
+                myIntent.putExtra("PHOTO_URI", currentPhoto.getUriString());
+            } else {
+                myIntent = new Intent(AddEditPhotoActivity.this, ViewAlbumActivity.class);
+                myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
+            }
             AddEditPhotoActivity.this.startActivity(myIntent);
         }
     };
@@ -85,6 +93,7 @@ public class AddEditPhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_photo);
+        setTitle("Add Photo");
         currentAlbum = AndroidPhotos.getUserData().getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
         String photoUri = getIntent().getStringExtra("PHOTO_URI");
         if(null != currentAlbum) {
@@ -108,8 +117,7 @@ public class AddEditPhotoActivity extends AppCompatActivity {
 
         //edit photo, not add
         if(type == 1 && null != currentPhoto) {
-            TextView title = (TextView) findViewById(R.id.title);
-            title.setText("Edit Photo");
+            setTitle("Edit Photo");
             selectButton.setEnabled(false);
             uri = Uri.parse(currentPhoto.getUriString());
             name = currentPhoto.getName();

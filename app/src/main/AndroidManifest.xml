@@ -21,11 +21,11 @@
         </activity>
         <activity android:name=".SearchActivity"></activity>
         <activity android:name=".CreateRenameAlbumActivity"></activity>
-        <activity android:name=".EditTagsActivity"></activity>
         <activity android:name=".AddEditPhotoActivity"></activity>
         <activity android:name=".ViewAlbumActivity"></activity>
         <activity android:name=".DisplayPhotoActivity"></activity>
         <activity android:name=".SlideshowActivity"></activity>
+        <activity android:name=".MoveActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.androidphotos.model.UserData;
 import com.example.androidphotos.model.UserData.*;
 import com.example.androidphotos.util.Pair;
 
@@ -23,6 +24,7 @@ public class DisplayPhotoActivity extends AppCompatActivity {
     private Button backButton;
     private Button editButton;
     private Button moveButton;
+    private Button removeButton;
     private ListView tagList;
     private TextView photoName;
 
@@ -46,14 +48,41 @@ public class DisplayPhotoActivity extends AppCompatActivity {
         }
     };
 
+    private View.OnClickListener removeListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if(null != currentAlbum && null != currentPhoto) {
+                currentAlbum.removePhoto(currentPhoto);
+                AndroidPhotos.setUserData(user);
+                Intent myIntent = new Intent(DisplayPhotoActivity.this, ViewAlbumActivity.class);
+                myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
+                DisplayPhotoActivity.this.startActivity(myIntent);
+            }
+        }
+    };
+
+    private View.OnClickListener moveListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+            Intent myIntent = new Intent(DisplayPhotoActivity.this, MoveActivity.class);
+            myIntent.putExtra("ALBUM_NAME", currentAlbum.getName());
+            myIntent.putExtra("PHOTO_URI", currentPhoto.getUriString());
+            DisplayPhotoActivity.this.startActivity(myIntent);
+        }
+    };
+
+
     private Album currentAlbum;
     private Photo currentPhoto;
+    private UserData user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.display_photo);
-        currentAlbum = AndroidPhotos.getUserData().getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
+        setTitle("Photo");
+        user = AndroidPhotos.getUserData();
+        currentAlbum = user.getAlbum(getIntent().getStringExtra("ALBUM_NAME"));
         currentPhoto = null;
         for(Photo p : currentAlbum.getPhotos()){
             if(p.getUriString().equals(getIntent().getStringExtra("PHOTO_URI"))) {
@@ -65,11 +94,14 @@ public class DisplayPhotoActivity extends AppCompatActivity {
         backButton = (Button) findViewById((R.id.backButton));
         editButton = (Button) findViewById(R.id.editPhotoButton);
         moveButton = (Button) findViewById(R.id.movePhotoButton);
+        removeButton = (Button) findViewById((R.id.removePhotoButton));
         tagList = (ListView) findViewById((R.id.photoTagList));
         photoName = (TextView) findViewById(R.id.caption);
 
         backButton.setOnClickListener(backListener);
         editButton.setOnClickListener(editListener);
+        removeButton.setOnClickListener(removeListener);
+        moveButton.setOnClickListener(moveListener);
         if(null != currentPhoto) {
             imgView.setImageURI(Uri.parse(currentPhoto.getUriString()));
             photoName.setText((CharSequence)currentPhoto.getName());
