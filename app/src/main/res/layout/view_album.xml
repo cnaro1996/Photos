@@ -46,6 +46,10 @@
             android:layout_height="264dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="false"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="1"
+            android:stretchMode="columnWidth"
             android:layout_marginTop="75sp"
             android:listSelector="@android:drawable/list_selector_background" />
 

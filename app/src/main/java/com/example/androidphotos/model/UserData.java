@@ -169,6 +169,16 @@ public class UserData implements Serializable {
             photos.remove(photo);
         }
 
+        public Photo searchPhotoByUriString(String uriString) {
+            for(Photo p : this.photos) {
+                if(p.getUriString().equals(uriString)) {
+                    return p;
+                }
+            }
+
+            return null;
+        }
+
         @Override
         public boolean equals(Object o) {
             if (o == this) {

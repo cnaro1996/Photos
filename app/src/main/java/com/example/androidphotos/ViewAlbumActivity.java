@@ -31,6 +31,8 @@ public class ViewAlbumActivity extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent intent = new Intent(ViewAlbumActivity.this, DisplayPhotoActivity.class);
             intent.setData((Uri) parent.getAdapter().getItem(position));
+            intent.putExtra("ALBUM_NAME", album.getName());
+            intent.putExtra("PHOTO_URI", ((Uri) parent.getAdapter().getItem(position)).toString());
             AndroidPhotos.setPrevState(ViewAlbumActivity.this);
             ViewAlbumActivity.this.startActivity(intent);
         }
@@ -80,8 +82,9 @@ public class ViewAlbumActivity extends AppCompatActivity {
     private View.OnClickListener addListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent myIntent = new Intent(ViewAlbumActivity.this, AddPhotoActivity.class);
+            Intent myIntent = new Intent(ViewAlbumActivity.this, AddEditPhotoActivity.class);
             myIntent.putExtra("ALBUM_NAME", album.getName());
+            myIntent.putExtra("TYPE", 0);
             AndroidPhotos.setPrevState(ViewAlbumActivity.this);
             ViewAlbumActivity.this.startActivity(myIntent);
         }
@@ -108,6 +111,9 @@ public class ViewAlbumActivity extends AppCompatActivity {
         addPhotoButton.setOnClickListener(addListener);
         viewSlideShowButton.setOnClickListener(slideShowListener);
         backButton.setOnClickListener(backListener);
-        photosGrid.setAdapter(new ImageGridAdapter(ViewAlbumActivity.this, UserData.getURIs(album)));
+        if(null != album) {
+            photosGrid.setAdapter(new ImageGridAdapter(ViewAlbumActivity.this, UserData.getURIs(album)));
+            photosGrid.setOnItemClickListener(photosGridListener);
+        }
     }
 }

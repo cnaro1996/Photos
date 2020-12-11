@@ -1,11 +1,13 @@
 package com.example.androidphotos.util;
 
+import java.io.Serializable;
+
 /**
  * Utility class, a Pair is an object that holds a pair of key and value attributes. A key:value pair.
  * @param <K> The key.
  * @param <V> The value.
  */
-public class Pair <K, V> {
+public class Pair <K, V> implements Serializable {
     private K key;
     private V value;
 
