@@ -1511,7 +1511,6 @@ id disableHome
 id displayPhotoImageView
 id dropdown_menu
 id editPhotoButton
-id editTagsButton
 id edit_query
 id end
 id enterAlways
@@ -1563,7 +1562,6 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
-id moveButton
 id movePhotoButton
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -1606,23 +1604,22 @@ id parent_matrix
 id password_toggle
 id peekHeight
 id percent
-id peronInput
 id personCB
+id personInput
 id photoTagList
 id photosGrid
 id pin
 id prevButton
 id progress_circular
 id progress_horizontal
-id prompt
 id radio
 id relativeLayout1
+id removePhotoButton
 id renameAlbumButton
 id right
 id right_icon
 id right_side
 id rounded
-id saveButton
 id savePhotoButton
 id save_non_transition_alpha
 id save_overlay_view
@@ -1801,7 +1798,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout display_photo
-layout edit_tags
 layout home
 layout move_photo
 layout mtrl_alert_dialog
@@ -1908,7 +1904,7 @@ string create_or_rename_album
 string date_range
 string date_range_format_hint
 string delete_button
-string edit_photo
+string edit
 string edit_tags
 string error_icon_content_description
 string example_album
@@ -1920,7 +1916,6 @@ string icon_content_description
 string location
 string move
 string move_photo
-string move_to_another_album
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1956,6 +1951,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string next
+string open_photos
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -1964,6 +1960,7 @@ string path_password_strike_through
 string person
 string photo_to_add
 string prev
+string remove
 string rename
 string rename_album
 string save
@@ -1971,7 +1968,6 @@ string search
 string search_for_photos
 string search_menu_title
 string select_album_to_move_to
-string select_from_phone
 string status_bar_notification_info_overflow
 string tags
 string tags_hint

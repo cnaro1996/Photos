@@ -31,9 +31,11 @@
         </activity>
         <activity android:name="com.example.androidphotos.SearchActivity" />
         <activity android:name="com.example.androidphotos.CreateRenameAlbumActivity" />
-        <activity android:name="com.example.androidphotos.EditTagsActivity" />
-        <activity android:name="com.example.androidphotos.AddPhotoActivity" />
+        <activity android:name="com.example.androidphotos.AddEditPhotoActivity" />
         <activity android:name="com.example.androidphotos.ViewAlbumActivity" />
+        <activity android:name="com.example.androidphotos.DisplayPhotoActivity" />
+        <activity android:name="com.example.androidphotos.SlideshowActivity" />
+        <activity android:name="com.example.androidphotos.MoveActivity" />
     </application>
 
 </manifest>

@@ -6,64 +6,70 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="29"
-8-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml
+8-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml
+9-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:5:5-81
-11-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:5:22-78
+11-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:5:5-81
+11-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:5:22-78
 12
 13    <application
-13-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:7:5-27:19
+13-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:7:5-29:19
 14        android:name="com.example.androidphotos.AndroidPhotos"
-14-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:8:9-38
+14-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:8:9-38
 15        android:allowBackup="true"
-15-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:9:9-35
+15-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:9:9-35
 16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-16-->[androidx.core:core:1.1.0] C:\Users\cnaro\.gradle\caches\transforms-2\files-2.1\73530a2d0c1df4b3085807c82555ce12\core-1.1.0\AndroidManifest.xml:24:18-86
+16-->[androidx.core:core:1.1.0] C:\Users\Chris\.gradle\caches\transforms-2\files-2.1\ae31cc97a3f9383e0242537d69427d3a\core-1.1.0\AndroidManifest.xml:24:18-86
 17        android:debuggable="true"
 18        android:extractNativeLibs="false"
 19        android:icon="@mipmap/ic_launcher"
-19-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:10:9-43
+19-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:10:9-43
 20        android:label="@string/app_name"
-20-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:11:9-41
+20-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:11:9-41
 21        android:roundIcon="@mipmap/ic_launcher_round"
-21-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:12:9-54
+21-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:12:9-54
 22        android:supportsRtl="true"
-22-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:13:9-35
+22-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:13:9-35
 23        android:testOnly="true"
 24        android:theme="@style/Theme.Androidphotos" >
-24-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:14:9-51
+24-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:14:9-51
 25        <activity android:name="com.example.androidphotos.HomeActivity" >
-25-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:16:9-21:20
-25-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:16:19-47
+25-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:16:9-21:20
+25-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:16:19-47
 26            <intent-filter>
-26-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:17:13-20:29
+26-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:17:13-20:29
 27                <action android:name="android.intent.action.MAIN" />
-27-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:18:17-69
-27-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:18:25-66
+27-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:18:17-69
+27-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:18:25-66
 28
 29                <category android:name="android.intent.category.LAUNCHER" />
-29-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:19:17-77
-29-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:19:27-74
+29-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:19:17-77
+29-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:19:27-74
 30            </intent-filter>
 31        </activity>
 32        <activity android:name="com.example.androidphotos.SearchActivity" />
-32-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:22:9-61
-32-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:22:19-49
+32-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:22:9-61
+32-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:22:19-49
 33        <activity android:name="com.example.androidphotos.CreateRenameAlbumActivity" />
-33-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:23:9-72
-33-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:23:19-60
-34        <activity android:name="com.example.androidphotos.EditTagsActivity" />
-34-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:24:9-63
-34-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:24:19-51
-35        <activity android:name="com.example.androidphotos.AddPhotoActivity" />
-35-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:25:9-63
-35-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:25:19-51
-36        <activity android:name="com.example.androidphotos.ViewAlbumActivity" />
-36-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:26:9-64
-36-->C:\Users\cnaro\Desktop\Fall 2020\Software Methodology\finalproject\Androidphotos\app\src\main\AndroidManifest.xml:26:19-52
-37    </application>
-38
-39</manifest>
+33-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:23:9-72
+33-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:23:19-60
+34        <activity android:name="com.example.androidphotos.AddEditPhotoActivity" />
+34-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:24:9-67
+34-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:24:19-55
+35        <activity android:name="com.example.androidphotos.ViewAlbumActivity" />
+35-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:25:9-64
+35-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:25:19-52
+36        <activity android:name="com.example.androidphotos.DisplayPhotoActivity" />
+36-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:26:9-67
+36-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:26:19-55
+37        <activity android:name="com.example.androidphotos.SlideshowActivity" />
+37-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:27:9-64
+37-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:27:19-52
+38        <activity android:name="com.example.androidphotos.MoveActivity" />
+38-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:28:9-59
+38-->C:\Users\Chris\Desktop\android49\app\src\main\AndroidManifest.xml:28:19-47
+39    </application>
+40
+41</manifest>
