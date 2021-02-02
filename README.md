@@ -7,13 +7,13 @@ Below you will see some screenshots of the android application's GUI
 
 
 ## Viewing A Photo
-![viewing a photo](https://github.com/cnaro1996/Photos/blob/master/img/ViewPhoto.PNG)
+![viewing a photo](https://github.com/cnaro1996/Photos/blob/master/img/ViewPhoto.png)
 
 ## Viewing An Album
-![viewing an album](https://github.com/cnaro1996/Photos/blob/master/img/ViewAlbum.PNG)
+![viewing an album](https://github.com/cnaro1996/Photos/blob/master/img/ViewAlbum.png)
 
 ## Moving A Photo From One Album To Another
-![moving a photo between albums](https://github.com/cnaro1996/Photos/blob/master/img/MovePhoto.PNG)
+![moving a photo between albums](https://github.com/cnaro1996/Photos/blob/master/img/MovePhoto.png)
 
 ## Adding New Photos
-![adding new photos to an album](https://github.com/cnaro1996/Photos/blob/master/img/AddPhoto.PNG)
+![adding new photos to an album](https://github.com/cnaro1996/Photos/blob/master/img/AddPhoto.png)
